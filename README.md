@@ -1,7 +1,7 @@
 Pushgateway NGINX Extras with unzip sidecar Step By Step
 ==================
 
-Given that Pushgateway and Envoy does not have capability to decompression gzipped request yet, here we are using the NGINX Extras with lua script to unzip the gzipped request then proxy it to the Pushgateway.
+Given that Pushgateway and Envoy does not have capability to decompression gzipped request yet, here we are using the NGINX Extras with lua script to unzip the gzipped request then proxy it to the Pushgateway, implemented as a Kubernetes sidecar.
 
 The Tools
 ---------
