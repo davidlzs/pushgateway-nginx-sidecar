@@ -1,7 +1,7 @@
 Pushgateway NGINX Extras with unzip sidecar Step By Step
 ==================
 
-Given that Pushgateway and Envoy dose not have capability to handle unzip request, here we are using the NGINX Extras with lua script to unzip the gzipped request then proxy it to the Pushgateway.
+Given that Pushgateway and Envoy does not have capability to decompression gzipped request yet, here we are using the NGINX Extras with lua script to unzip the gzipped request then proxy it to the Pushgateway.
 
 The Tools
 ---------
@@ -17,7 +17,7 @@ References
 1. [Howto make Nginx decompress a gzipped request](https://www.pataliebre.net/howto-make-nginx-decompress-a-gzipped-request.html#.Xr6Ip3VKg8q)
 2. [Implementing A Reverse Proxy Server In Kubernetes Using The Sidecar](https://www.magalix.com/blog/implemeting-a-reverse-proxy-server-in-kubernetes-using-the-sidecar-pattern)
 
-Step 0: Build the sidecar docker image
+Step 1: Build the sidecar docker image
 ================
 
 Start `minikube`,
@@ -37,14 +37,14 @@ In `nginx-extras-with-unzip` folder, run
 You should see your docker image on your local docker registry.
 
 
-Step 1: Deploy Pushgateway and it's sidecar
+Step 2: Deploy Pushgateway and it's sidecar
 ================
 
 In root folder, run:
 
 ```kubectl apply -f pushgateway_deployment.yaml```
 
-Step 2: Test/Verify
+Step 3: Test/Verify
 ================
 
 If you are running on Linux, you can start `node-exporter`.
