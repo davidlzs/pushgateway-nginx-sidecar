@@ -10,6 +10,8 @@ Tools we'll be using:
 
 1. [minikube](https://github.com/kubernetes/minikube)
 2. [NGINX Extras](https://www.getpagespeed.com/nginx-extras)
+3. [node exporter](https://github.com/prometheus/node_exporter)
+4. [push gateway](https://github.com/prometheus/pushgateway)
 
 References
 ---------
